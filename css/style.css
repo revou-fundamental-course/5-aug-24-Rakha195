@@ -1,0 +1,34 @@
+* {
+    font-family: Arial;
+}
+
+.kotak {
+    border: 1px solid;
+    padding: 10px;
+    background-color: ghostwhite;
+}
+
+.kelamin {
+    margin-bottom: 20px;
+}
+
+.kemaluan {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.umur {
+    margin-bottom: 9px;
+}
+
+.FR {
+    background-color: rgb(126, 208, 241);
+}
+
+.jawaban {
+    margin-top: 20px;
+}
+
+main {
+    display: flex;
+}
