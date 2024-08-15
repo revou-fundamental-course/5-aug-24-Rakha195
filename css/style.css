@@ -1,34 +1,148 @@
 * {
-    font-family: Arial;
+    font-family: Arial
+}
+
+body {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;  
 }
 
 .kotak {
     border: 1px solid;
     padding: 10px;
     background-color: ghostwhite;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.kelamin {
-    margin-bottom: 20px;
+.hasil {
+    padding: 10px;
+    margin: 20px;
 }
 
-.kemaluan {
-    margin-top: 0%;
-    margin-bottom: 0%;
+.bantuan {
+    text-align: center;
 }
 
 .umur {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.FR {
+button{
+    height: 40px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgba(126,208,241);
+    border: none;
+    cursor: pointer;
+}
+
+.FR-hitung {
     background-color: rgb(126, 208, 241);
 }
 
-.jawaban {
-    margin-top: 20px;
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
-main {
-    display: flex;
+@media (min-width: 768px) {
+    body {
+        flex-direction: column;
+    }
 }
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+aside {
+    margin: 35px;
+}
+
+h3+form{
+    border: 1px solid black;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px;
+    height: 170px;
+     background-color: ghostwhite;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.terakhir {
+    border: 1px solid;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px;
+    height: 300px;
+    background-color: ghostwhite;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+form+h4{
+    color: black !important;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+    
+    aside {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    aside:last-of-type {
+        margin-right: 0;
+    }
+
+    .kotak {
+        margin: 20px;
+    }
+
+    button {
+        width: auto;
+        display: inline-block;
+    }
+
+    .FR-reset {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    h1 {
+        margin-top: 30px;
+    }
+
+    .kotak {
+        padding: 20px;
+    }
+}
+   

@@ -1,72 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>kalkulator BMI</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-   <header>
+    <header>
         <h1 class="judul">Kalkulator BMI</h1>
-   </header>
+    </header>
 
-   <main>
+    <main class="container">
         <aside>
-        <article>
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis ab doloribus doloremque suscipit accusamus, culpa possimus maxime tempora quasi impedit sed odio quia illo voluptates nesciunt id quidem magnam hic.</p>
-            </div>
-        </article>
+            <article>
+                <div>
+                    <p>
+                        Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang
+                        penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk,
+                        hitung sekarang di BMI Kalkulator
+                    </p>
+                </div>
+            </article>
 
-        <form class="kotak">
-            <div class="kelamin">
-                <h3 class="kemaluan">Jenis kelamin</h3>
-                <input type="radio" id="laki-laki" name="jenis kelamin" value="laki-laki"><label for="laki-laki">laki-laki</label>
-                <input type="radio" id="perempuan" name="jenis kelamin" value=perempuan"><label for="perempuan">perempuan</label>
-            </div>
+            <form class="kotak">
+                <div>
+                    <h3 class="umur">Jenis kelamin</h3>
+                    <input type="radio" id="perempuan" name="jenis kelamin" value="perempuan"><label
+                        for="perempuan">perempuan</label>
+                    <input type="radio" id="laki laki" name="jenis kelamin" value="laki laki"><label for="laki laki">laki
+                        laki</label>
 
-            <div>
-                <h3 class="umur">Berat Badan</h3>
-                <input type="number">
-            </div>
+                </div>
 
-            <div>
-                <h3 class="umur">Usia</h3>
-                <input type="number">
+                <div>
+                    <h3 class="umur">Berat Badan</h3>
+                    <input type="number" id="berat"><label for="berat"></label>
+                </div>
+
+                <div>
+                    <h3 class="umur">Usia</h3>
+                    <input type="number" id="usia"><label for="usia""></label>
             </div>
 
             <div>
                 <h3 class="umur">Tinggi Badan (cm)</h3>
-                <input type="number">
-            </div>
+                        <input type="number" id="tinggi"><label for="tinggi"></label>
+                </div>
 
-            <div class="jawaban">
-                <button class="FR">Hitung</button>
-                <button>Reset</button>
-            </div>
-        </form>
-        <br>
-        <article>
-            <div>
-                <h3>for information</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos veritatis tempora praesentium voluptatibus eum numquam reprehenderit voluptatem, consequuntur, officiis aspernatur, assumenda eius dolorem iure autem laboriosam provident minima qui.
-                </p>
-            </div>
-        </article>
-    
+                <div class="umur">
+                            <button type="button" class="FR-hitung" onclick="hitungbmi()">Hitung</button>
+                            <button type="button" class="FR-reset" onclick="resetbmi()">Reset</button>
+                </div>
+            </form>
+            <article>
+                <div>
+                    <h3>Keunggulan fitur</h3>
+                    <ol>
+                        <li>menghitung berat badan</li>
+                        <li>menentukan kategori berat badan ideal atau Tidak</li>
+                        <li>mempersiapkan program penurunan berat badan</li>
+                    </ol>
+                    <p>
+                        kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter
+                    </p>
+                    <p>
+                        kalkulatorakan memberi Anda gambaran tentang perbandingan berat badan anda dengan nilai umum. Indek Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) Dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/m<sup>2</sup>
+                    </p>
+                </div>
+            </article>
+
         </aside>
-        
+
         <aside>
             <section>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione possimus est ipsa odio magnam quaerat distinctio laudantium deserunt aut dicta, corrupti quo corporis labore et illo, reprehenderit impedit libero repellendus!
-                </p>
+                <div class="hasil">
+                    <h3>Hasil</h3>
+                    <form>
+                        <h4 id="heading"></h4>
+                        <p id="BMI-output"></p>
+                        <p id="message"></p>
+                        <input type="button" id="download hasil bmi" name="BMI" value="download hasil bmi"><label
+                        for="download hasil bmi"></label>
+                    </form>
+                </div>
             </section>
+            <form>
+                <div class="bantuan">
+                    <button type="button">Konsultasi Dokter Via Aplikasi</button>
+                    <button type="button">Konsultasi Dokter Via Aplikasi</button>
+                </div>
+            </form>
+            <article>
+                <p>
+                    BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu Konsultasilebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda
+                </p>
+            </article>
+            <form class="terakhir">
+                <div>
+                    <p>Beberapa penyakit yang berasal dari kegemukan</p>
+                    <p>Diabetes</p>
+                    <p>hipertensi</p>
+                    <p>Sakit Jantung</p>
+                    <p>osteoarthritis</p>
+                </div>
+                <div class="bantuan">
+                    <button type="button">Konsultasi Dokter Via Aplikasi</button>
+                    <button type="button">Konsultasi Dokter Via Aplikasi</button>
+                </div>
+            </form>
         </aside>
-   </main>
-
-   <footer></footer>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
